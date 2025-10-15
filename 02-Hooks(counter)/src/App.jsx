@@ -8,13 +8,33 @@ function App() {
 
   let [counter, setCounter] = useState(5)
 
-  const AddCounter = () => {
-    if (counter < 20) {
-      counter++;
-      setCounter(counter);
-    }
+  // const AddCounter = () => {
+  //   if (counter < 20) {
+  //     counter+=2;
+  //     setCounter(counter);
+  //   }
 
-    console.log(counter);
+  //   console.log(counter);
+  // }
+
+  // const AddCounter = () => {
+  //   setCounter(counter+1);    //count get 6 (5+1)
+  //   setCounter(counter+1);    //count get 6(5+1)
+  //   setCounter(counter+1);
+  //   setCounter(counter+1);    //count get 6(5+1) , the last one is follows , if all statement are doing same work in batches. 
+
+  //   console.log(counter);
+    
+  // }
+
+  const AddCounter = ()=> {
+    setCounter((prevCounter) => prevCounter+1)     //Here we taking Counter(prevCounter) as paramenter and return prevCounter +1 for next iteration return (5+1)
+    setCounter((prevCounter) => prevCounter+1)     //return (6+1)
+    setCounter((prevCounter) => prevCounter+1)
+    setCounter((prevCounter) => prevCounter+1)     //return (8+1) = 9
+
+    console.log(counter);     //we will just get the initail value of counter , i.e - 5(not the updated one 9). When we again click on addcounter , then for that state we get 9 , for that value would be increased by 4 , i.e 13 and so on.
+    
   }
 
   const RemoveCounter = () => {
