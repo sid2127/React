@@ -1,0 +1,7 @@
+{
+    "workbench.settings.useSplitJSON": true,
+    "css.validate": false,
+    "tailwindCSS.includeLanguages": { "javascript": "javascriptreact" }
+}
+
+

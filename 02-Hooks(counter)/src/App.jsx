@@ -8,6 +8,9 @@ function App() {
 
   let [counter, setCounter] = useState(5)
 
+  console.log(counter);
+  
+
   // const AddCounter = () => {
   //   if (counter < 20) {
   //     counter+=2;
